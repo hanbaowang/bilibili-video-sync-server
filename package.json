@@ -1,0 +1,25 @@
+{
+  "name": "bilibili-video-sync-server",
+  "version": "0.1.0",
+  "description": "server side for https://github.com/aMoonkin/bilibili-video-sync",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aMoonkin/bilibili-video-sync-server.git"
+  },
+  "author": "Mingfei Ding",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/aMoonkin/bilibili-video-sync-server/issues"
+  },
+  "homepage": "https://github.com/aMoonkin/bilibili-video-sync-server#readme",
+  "dependencies": {
+    "@deepstream/server": "^5.0.5",
+    "koa": "^2.11.0",
+    "nanoid": "^2.1.9",
+    "redis": "^2.8.0"
+  }
+}
