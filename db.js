@@ -20,15 +20,18 @@ async function set(params) {
     const value = params[key]
 
     if (typeof key !== 'string') {
+        console.error('type error, key is not a strint')
         return false;
     }
 
     const status = await get(key)
     if (status !== null) {
+        console.error('key has already existed, key = ', key, 'result = ', status)
         return false
     }
 
-    return await setAsync(key, value);
+    const res = await setAsync(key, value);
+    return res;
 }
 
 module.exports = {
