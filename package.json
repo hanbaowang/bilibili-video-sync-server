@@ -4,6 +4,7 @@
   "description": "server side for https://github.com/aMoonkin/bilibili-video-sync",
   "main": "start.js",
   "scripts": {
+    "start": "node start.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
