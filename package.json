@@ -19,6 +19,7 @@
   "homepage": "https://github.com/aMoonkin/bilibili-video-sync-server#readme",
   "dependencies": {
     "@deepstream/server": "^5.0.5",
+    "@koa/cors": "^2.2.3",
     "@koa/router": "^8.0.5",
     "koa": "^2.11.0",
     "nanoid": "^2.1.9",

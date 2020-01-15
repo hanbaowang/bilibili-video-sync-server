@@ -1,11 +1,13 @@
 const generate = require('nanoid/generate');
 const Koa = require('koa');
 const Router = require('@koa/router');
+const cors = require('@koa/cors');
 
 const { get, set } = require('./db')
 
 const app = new Koa();
 const router = new Router();
+app.use(cors());
 
 const alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
