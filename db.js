@@ -34,7 +34,17 @@ async function set(params) {
     return res;
 }
 
+async function del(key) {
+    if (typeof key !== 'string') {
+        console.error('type error, key is not a strint')
+        return false;
+    }
+
+    client.del(key)
+}
+
 module.exports = {
     get,
-    set
+    set,
+    del
 }

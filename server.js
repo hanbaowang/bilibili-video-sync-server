@@ -3,7 +3,7 @@ const Koa = require('koa');
 const Router = require('@koa/router');
 const cors = require('@koa/cors');
 
-const { get, set } = require('./db')
+const { get, set, del } = require('./db')
 
 const app = new Koa();
 const router = new Router();
@@ -42,6 +42,23 @@ router.get('/check', async ctx => {
         ctx.body = {
             status: true
         }
+    }
+})
+
+router.post('close', async ctx => {
+    const id = ctx.body.id;
+    del(id);
+
+    const status = await get(id);
+    if (status === null) {
+        ctx.body = {
+            status: true
+        };
+    } else {
+        ctx.body = {
+            status: false,
+            error: 'key cannot be removed'
+        };
     }
 })
 
